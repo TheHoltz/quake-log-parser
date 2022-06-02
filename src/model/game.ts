@@ -72,7 +72,8 @@ class Game {
                 return;
             }
 
-            output[player.name()] = player.kills();
+            // using score, because it removes -1 for each world kill
+            output[player.name()] = player.score();
         });
 
         return output;

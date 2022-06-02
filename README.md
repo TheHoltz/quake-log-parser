@@ -8,4 +8,10 @@ First, compile the code:
 
 Execute the command:
 
-`node ./dist/index.js generate -i ./input/game.log -o ./output/out.json`
+`yarn generate`
+
+# Command line
+
+You can also play with other logs, using the command:
+
+`node ./dist/index.js generate -i [INPUT_FILE] -o ./output/out.json`

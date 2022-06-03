@@ -6,7 +6,7 @@
   "author": "William Giani <holtzs.william@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "quick-compile": "ts-node src/index.ts",
     "generate": "node ./dist/index.js generate -i ./input/game.log -o ./output/out.json",
     "dev": "nodemon src/index.ts",
     "build": "tsc ./src/index.ts --outDir ./dist --skipLibCheck"

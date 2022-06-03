@@ -26,6 +26,10 @@ You can also play with other logs, using the command:
 
 # Frontend
 
+Go to the frontend folder:
+
+`cd frontend`
+
 Install the dependencies with:
 
 `yarn`

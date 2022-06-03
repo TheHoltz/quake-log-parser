@@ -12,11 +12,10 @@ class Parser {
     private allGames = new Array<Game>();
 
     private parseInitGame(line: string): void {
-        this.currentGame = new Game(`game_${this.allGames.length + 1}`);
-    }
-
-    private parseShutdownGame(line: string): void {
-        this.allGames.push(this.currentGame);
+        // some games have no shutdown
+        if (this.currentGame) {
+            this.allGames.push(this.currentGame);
+        }
 
         this.currentGame = new Game(`game_${this.allGames.length + 1}`);
     }
@@ -104,9 +103,6 @@ class Parser {
             case "InitGame":
                 this.parseInitGame(line);
                 break;
-            case "ShutdownGame":
-                this.parseShutdownGame(line);
-                break;
             case "ClientConnect":
                 this.parseClientConnect(line);
                 break;
@@ -128,12 +124,10 @@ class Parser {
     }
 
     public generateReport(): Report {
-
         const output = <Report>{};
 
         this.allGames.forEach((game) => {
-
-            const players = game.players().map((player) => (player.name()));
+            const players = game.players().map((player) => player.name());
             const totalKills = game.totalKills();
             const kills = game.killsByEachPlayer();
             const kills_by_means = game.killsByMeans();
@@ -143,11 +137,10 @@ class Parser {
                 totalKills,
                 kills,
                 kills_by_means,
-            }
-
+            };
         });
 
-        return output
+        return output;
     }
 }
 

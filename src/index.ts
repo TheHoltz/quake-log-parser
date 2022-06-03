@@ -25,6 +25,9 @@ async function processLog(inputFile: string, outputFile: string) {
     console.log(`Report generated at ${outputFile}`);
 }
 
+// Debug only
+// processLog("./input/game.log", "./output/teste.json")
+
 const argv = yargs(hideBin(process.argv))
     .usage("Usage: $0 -i [input_file] -o [output_file]")
     .example('generate -i ./input/game.log -o ./output/out.json', 'generate a report file for the game.log file')

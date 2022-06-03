@@ -6,6 +6,10 @@ https://user-images.githubusercontent.com/38303017/171876769-2e8e63af-7023-4f42-
 
 # Usage
 
+Install the dependencies with:
+
+`yarn`
+
 First, compile the code:
 
 `yarn build`
@@ -13,6 +17,18 @@ First, compile the code:
 Execute the command:
 
 `yarn generate`
+
+# Frontend
+
+Install the dependencies with:
+
+`yarn`
+
+Run the project with:
+
+`yarn dev`
+
+Navigate to `localhost:3000`
 
 # Command line
 
